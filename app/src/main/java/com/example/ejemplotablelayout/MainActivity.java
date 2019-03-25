@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -120,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
                 listaViews.put(editText.getId(), editText);
 
-                /*
+                /* USO DE LA PROPIEDAD TAG DE LOS OBJETOS VIEW
                 // todos los views tienen un atributo llamado tag que vale para guardar en el
                 // información adicional que queramos tener asiciada a la view.
 
@@ -130,6 +129,21 @@ public class MainActivity extends AppCompatActivity {
                 //Estos datos luego los podemos obtener con getTag
                 int numero = (Integer) editText.getTag(0);
                 String texto = (String) editText.getTag(1);*/
+
+                /* Podemos utilizar tb un Bundle para guardar los datos por nombre,valor y
+                pasadle el Bundle al tag.
+
+                Bundle miSacoCosas = new Bundle();
+                miSacoCosas.putInt("mi_numero",34);
+                miSacoCosas.putString("mi_texto","otro dato");
+                editText.setTag(miSacoCosas);
+
+                // Para extraer..
+
+                Bundle miBundle = (Bundle)editText.getTag();
+                miBundle.getInt("mi_numero",-1);
+                miBundle.getString("mi_texto",null);
+                */
 
             }
         }
