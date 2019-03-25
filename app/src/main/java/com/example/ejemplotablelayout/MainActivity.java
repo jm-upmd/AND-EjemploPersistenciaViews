@@ -117,7 +117,20 @@ public class MainActivity extends AppCompatActivity {
             for (int posBoton = 0; posBoton < numBotonesFila; posBoton++) {
                 EditText editText = (EditText) rowLayout.getChildAt(posBoton);
                 // Añade al hashtable el par clave,valor (id,edittext)
+
                 listaViews.put(editText.getId(), editText);
+
+                /*
+                // todos los views tienen un atributo llamado tag que vale para guardar en el
+                // información adicional que queramos tener asiciada a la view.
+
+                editText.setTag(0,34);
+                editText.setTag(1,"otro dato");
+
+                //Estos datos luego los podemos obtener con getTag
+                int numero = (Integer) editText.getTag(0);
+                String texto = (String) editText.getTag(1);*/
+
             }
         }
     }
